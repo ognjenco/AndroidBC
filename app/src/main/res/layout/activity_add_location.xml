@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ognjen.myapplication.AddLocationActivity">
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_location_title"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+
+
+    <TextView
+        android:id="@+id/latitudeText"
+        android:labelFor="@+id/latitudeEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleText"
+        android:text="@string/latitude_label" />
+
+    <EditText
+        android:id="@+id/latitudeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/latitudeText"
+        android:inputType="numberSigned"
+        android:drawableEnd="@drawable/degree_icon"
+        />
+
+    <TextView
+        android:id="@+id/longitudeText"
+        android:labelFor="@+id/longitudeEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/longitude_label"
+        android:layout_below="@id/latitudeEdit" />
+
+    <EditText
+        android:id="@+id/longitudeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:layout_below="@id/longitudeText"
+        android:drawableEnd="@drawable/degree_icon"/>
+
+    <TextView
+        android:id="@+id/altitudeText"
+        android:labelFor="@+id/altitudeEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/altitude_label"
+        android:layout_below="@id/longitudeEdit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/altitudeText"
+        android:id="@+id/altitudeEditLayout">
+        <EditText
+            android:id="@+id/altitudeEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:inputType="numberDecimal" />
+
+
+        <TextView
+            android:id="@+id/altitudeUnitsLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="m/s"
+            android:layout_weight="0.3"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/speedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speed"
+        android:layout_below="@id/altitudeEditLayout"
+        />
+
+    <EditText
+        android:id="@+id/speedEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:focusable="false"
+        android:layout_below="@id/speedText" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="add"/>
+
+</android.widget.RelativeLayout>

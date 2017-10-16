@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ognjen.myapplication.NewTrack">
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_track_title"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        />
+
+
+    <TextView
+        android:id="@+id/name_label"
+        style="@style/input_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/titleText"
+        android:text="@string/name_label"/>
+
+    <EditText
+        android:id="@+id/name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/name_label"
+        android:layout_below="@+id/name_label"
+        android:hint="@string/enter_name_hint"
+        android:inputType="text"
+        />
+
+    <TextView
+        android:id="@+id/description_Label"
+        style="@style/input_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/name_edit"
+        android:layout_below="@+id/name_edit"
+        android:text="@string/description_label" />
+
+    <EditText
+        android:id="@+id/description_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/description_Label"
+        android:layout_below="@+id/description_Label"
+        android:hint="@string/enter_description_hint"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/start_button"
+        style="@style/bottom_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="startTrack"
+        android:text="@string/start_track_button_label" />
+
+
+</android.widget.RelativeLayout>

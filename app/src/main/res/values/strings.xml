@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="add_track_button">New Track</string>
+    <string name="no_tracks_label">You have no tracks recorded, add new tracks to view them here</string>
+    <string name="new_track_title">New Track</string>
+    <string name="name_label">Name</string>
+    <string name="enter_name_hint">Enter Name</string>
+    <string name="description_label">Description</string>
+    <string name="enter_description_hint">Description</string>
+    <string name="start_track_button_label">Start</string>
+
+    <string name="add_track_error_message">Please correct false values!</string>
+    <string name="start_track_error_title">Invalid input</string>
+    <string name="add_location_button_text">Add Location</string>
+    <string name="done_button_text">Done</string>
+    <string name="empty_locations_text">No locations added yet, add locations to see them here</string>
+    <string name="latitude_label">Latitude</string>
+    <string name="add_location_title">Add Location</string>
+    <string name="longitude_label">Longitude</string>
+    <string name="altitude_label">Altitude</string>
+    <string name="city_location_info_format">Longitude: %1$f\nLatitude: %2$f\nAltitude: %3$f</string>
+    <string name="empty_text_error">%s can not be empty</string>
+    <string name="degree_range_error">%s must be between -90 and 90 degrees</string>
+
+</resources>

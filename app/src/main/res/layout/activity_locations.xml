@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ognjen.myapplication.locations.LocationsActivity">
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/subTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:layout_centerHorizontal="true"/>
+
+
+    <Button
+        android:id="@+id/addLocation_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/add_location_button_text"
+        android:layout_below="@id/subTitleText"
+        android:layout_centerHorizontal="true"
+        android:onClick="addLocation"/>
+
+    <Button
+        android:id="@+id/done_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp"
+        android:text="@string/done_button_text"
+        android:onClick="done"/>
+
+    <ListView
+        android:id="@+id/locations_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/addLocation_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_above="@+id/done_button" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@android:id/empty"
+        android:text="@string/empty_locations_text"
+        />
+
+
+</android.widget.RelativeLayout>
