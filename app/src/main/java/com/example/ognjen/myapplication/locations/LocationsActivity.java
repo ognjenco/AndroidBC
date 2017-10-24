@@ -7,24 +7,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.ognjen.myapplication.AddLocationActivity;
-import com.example.ognjen.myapplication.MyTrackActivity;
+import com.example.ognjen.myapplication.mytrack.MyTrackActivity;
 import com.example.ognjen.myapplication.R;
 import com.example.ognjen.myapplication.model.Track;
 import com.example.ognjen.myapplication.model.TracksMemory;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import static com.example.ognjen.myapplication.AddLocationActivity.RESULT_LOCATION;
-import static com.example.ognjen.myapplication.MyTrackActivity.LOG_TAG;
-import static com.example.ognjen.myapplication.MyTrackActivity.RESULT_LOCATIONS;
+import static com.example.ognjen.myapplication.mytrack.MyTrackActivity.LOG_TAG;
+import static com.example.ognjen.myapplication.mytrack.MyTrackActivity.RESULT_LOCATIONS;
 import static com.example.ognjen.myapplication.NewTrack.RESULT_DESCRIPTION;
 import static com.example.ognjen.myapplication.NewTrack.RESULT_NAME;
 
@@ -51,7 +46,7 @@ public class LocationsActivity extends AppCompatActivity {
             findViewById(R.id.addLocation_button).setVisibility(View.GONE);
             canAddLocations = false;
         }
-        locationArrayAdapter = new LocationsListAdapter(this, android.R.layout.simple_list_item_1, track.getLocations());
+        locationArrayAdapter = new LocationsListAdapter(this, R.layout.locations_list_item, track.getLocations());
         ListView locationsList = (ListView) findViewById(R.id.locations_list);
 
         locationsList.setAdapter(locationArrayAdapter);

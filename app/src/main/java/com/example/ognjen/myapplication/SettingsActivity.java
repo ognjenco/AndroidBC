@@ -13,10 +13,9 @@ import android.widget.TextView;
 
 import com.example.ognjen.myapplication.model.SettingsManager;
 import com.example.ognjen.myapplication.model.Validation;
+import com.example.ognjen.myapplication.mytrack.MyTrackActivity;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -64,7 +63,9 @@ public class SettingsActivity extends AppCompatActivity {
         EditText sampleRateEdit = (EditText) findViewById(R.id.sampleRateEdit);
 
 
-        if(!(Validation.validateEmpty(speedEdit, "Speed") && Validation.validateEmpty(sampleRateEdit, "Sample Rate"))){
+        boolean validSpeed = Validation.validateEmpty(speedEdit, "Speed");
+        boolean validSampleRate = Validation.validateEmpty(sampleRateEdit, "Sample Rate");
+        if(!(validSpeed && validSampleRate)){
             Validation.displayErrorDialog(this);
         } else {
             SettingsManager.getInstance().setSettings(Integer.parseInt(sampleRateEdit.getText().toString()), Float.parseFloat(speedEdit.getText().toString()), selectedCity);

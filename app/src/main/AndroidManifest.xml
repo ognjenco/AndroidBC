@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MyTrackActivity">
+        <activity android:name=".mytrack.MyTrackActivity" android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewTrack" />
-        <activity android:name=".locations.LocationsActivity" />
-        <activity android:name=".AddLocationActivity" />
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".NewTrack" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".locations.LocationsActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".AddLocationActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".SettingsActivity" android:windowSoftInputMode="adjustResize"></activity>
     </application>
 
 </manifest>

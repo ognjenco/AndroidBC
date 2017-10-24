@@ -1,8 +1,6 @@
 package com.example.ognjen.myapplication;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,7 +10,7 @@ import android.widget.EditText;
 import com.example.ognjen.myapplication.locations.LocationsActivity;
 import com.example.ognjen.myapplication.model.Validation;
 
-import static com.example.ognjen.myapplication.MyTrackActivity.LOG_TAG;
+import static com.example.ognjen.myapplication.mytrack.MyTrackActivity.LOG_TAG;
 
 public class NewTrack extends AppCompatActivity {
 
@@ -29,8 +27,9 @@ public class NewTrack extends AppCompatActivity {
         Log.i(LOG_TAG, "in startTrack handler");
         EditText nameEdit = (EditText) findViewById(R.id.name_edit);
         EditText descriptionEdit = (EditText) findViewById(R.id.description_edit);
-
-        if(!(Validation.validateEmpty(nameEdit, "Name") && Validation.validateEmpty(descriptionEdit, "Description"))){
+        boolean validName = Validation.validateEmpty(nameEdit, "Name");
+        boolean validDescription = Validation.validateEmpty(descriptionEdit, "Description");
+        if(!(validName && validDescription)){
             Validation.displayErrorDialog(this);
         } else {
             Intent intent = new Intent(this, LocationsActivity.class);

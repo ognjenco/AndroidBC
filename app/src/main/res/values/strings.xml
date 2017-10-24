@@ -21,5 +21,8 @@
     <string name="city_location_info_format">Longitude: %1$f\nLatitude: %2$f\nAltitude: %3$f</string>
     <string name="empty_text_error">%s can not be empty</string>
     <string name="degree_range_error">%s must be between -90 and 90 degrees</string>
+    <string name="longitude_list_label">Longitude: %f</string>
+    <string name="latitude_list_label">Latitude: %f</string>
+    <string name="altitude_list_label">Altitude: %f</string>
 
 </resources>

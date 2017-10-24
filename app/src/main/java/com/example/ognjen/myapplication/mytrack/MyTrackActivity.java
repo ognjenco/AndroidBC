@@ -1,4 +1,4 @@
-package com.example.ognjen.myapplication;
+package com.example.ognjen.myapplication.mytrack;
 
 import android.content.Intent;
 import android.location.Location;
@@ -11,6 +11,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.ognjen.myapplication.NewTrack;
+import com.example.ognjen.myapplication.R;
+import com.example.ognjen.myapplication.SettingsActivity;
 import com.example.ognjen.myapplication.locations.LocationsActivity;
 import com.example.ognjen.myapplication.model.Track;
 import com.example.ognjen.myapplication.model.TracksMemory;
@@ -38,8 +41,6 @@ public class MyTrackActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.tracksListView);
         listView.setAdapter(tracksAdapter);
         listView.setEmptyView(findViewById(android.R.id.empty));
-//        trackList.add(new Track("My name", "My description"));
-//        tracksAdapter.notifyDataSetChanged();
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
